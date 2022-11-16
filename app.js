@@ -1,14 +1,18 @@
+"use strict";
+
+// 모듈
 const express = require("express");
 const app = express();
 
-app.get('/', (req,res)=>{
-    res.send("main페이지");
-});
+// 라우팅
+const home = require("./routes/home");
 
-app.get('/login', (req,res)=>{
-    res.send("login페이지");
-});
+// 앱 세팅
+app.set("views", "./views");
+app.set("view engine", "ejs");
+// app.engine("html", require("ejs").renderFile);
+// app.use(express.static("./views"));
 
-app.listen(3000, function(){
-    console.log("start server");
-});
+app.use("/", home);  // use : 미들웨어 등록해주는 메서드
+
+module.exports = app;

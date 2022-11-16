@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <title>로그인 페이지</title>
+        <link rel="stylesheet" href="login.css">
+        <link href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap" rel="stylesheet">
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script type="text/javascript">   
+            $(document).ready( function() {
+            $("#headers").load("header.html");
+            });
+        </script>
+    </head>
+    
+    <body>
+        <div id="headers"></div>
+        <section class="login-form"> 
+            <h1>LOG IN</h1>
+            <form action="">
+                <div class="int-area">
+                    <input type="text" name="id" id="id" autocomplete="off" required>
+                    <label for="id">ID</label>
+                </div>
+                <div class="int-area">
+                    <input type="password" name="pw" id="pw" autocomplete="off" required>
+                    <label for="pw">PASSWORD</label>
+                </div>
+                <div class="btn-area">
+                    <button id="btn" type="submit">LOGIN</button>
+                </div>
+            </form>
+            <div class="caption"></div>
+                <a href="Signup.html" style="color: black;">회원가입</a>
+            </div>
+        </section>
+        <script>
+            let id = document.querySelector('#id')
+            let pw = document.querySelector('#pw')
+            let btn = document.querySelector('#btn')
+    
+            btn.addEventListener('click', () => {
+                if(id.value == "") {
+                    label = id.nextElementSibling
+                    label.classList.add('warning')
+                    setTimeout(() => {
+                        label.classList.remove('warning')
+                    }, 1500)
+                } else if(pw.value == "") {
+                    label = pw.nextElementSibling
+                    label.classList.add('warning')
+                    setTimeout(() => {
+                        label.classList.remove('warning')
+                    }, 1500)
+                }
+            })
+        </script>
+    </body>
+</html>
