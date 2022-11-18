@@ -23,6 +23,20 @@ class userstorage{
         return newusers;
     }
 
+    //user field에서 필요한 값 하나 불러오기 - 강의 21
+    //id를 입력하면 그와 관련된 pw, name...오브젝트{}로 전달해주는 
+    static getuserinfo(id){
+        const users = this.#users;
+        const idx = users.id.indexOf(id); //해당 id의 배열 인덱스 파악 
+        const userskeys = Object.keys(users); // == [id, psword, name]
+        const userinfo = userskeys.reduce((newusers, info)=>{
+            newusers[info] = users[info][idx]; //해당 id와 같은 인덱스를 가진 == 같은 사용자의 데이터
+            return newusers;
+        }, {});
+
+        return userinfo;
+    }
+
 }
 
 module.exports = userstorage;
