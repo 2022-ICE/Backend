@@ -4,14 +4,14 @@
         <meta charset="UTF-8">
         <title>로그인 페이지</title>
         <script src="/js/home/login.js" defer></script>
-        <!--<link rel="stylesheet" href="login.css">-->
+        <link rel="stylesheet" href="/css/home/login.css">
         <link href="https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap" rel="stylesheet">
-        <!--<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-        <script type="text/javascript">   
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <!-- <script type="text/javascript">   
             $(document).ready( function() {
-            $("#headers").load("header.html");
+            $("#headers").load("/views/home/Header.ejs");
             });
-        </script>-->
+        </script> -->
     </head>
     
     <body>
@@ -21,21 +21,26 @@
             <form action="main.ejs" method="POST">
                 <div class="int-area">
                     <input type="text" name="id" id="id" autocomplete="off" required>
-                    <label for="id">ID</label>
+                    <label for="id">STUDENT ID</label>
                 </div>
                 <div class="int-area">
                     <input type="password" name="pw" id="pw" autocomplete="off" required>
                     <label for="pw">PASSWORD</label>
                 </div>
             </form>
+            
             <div class="btn-area">
                 <button id="btn" type="submit">LOGIN</button>
             </div>
-            <div class="caption"></div>
-                <a href="Signup.html" style="color: black;">회원가입</a>
+            <div style="float:right">
+                <p><a href="/signup">Create an account</a></p>
             </div>
+            <!-- <div class="caption"></div>
+                <a href="Signup.html" style="color: black;">회원가입</a>
+            </div> -->
         </section>
-        <!--<script>
+        <!--내가 따로 빼서 node에 작업함
+            <script>
             let id = document.querySelector('#id')
             let pw = document.querySelector('#pw')
             let btn = document.querySelector('#btn')

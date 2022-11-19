@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap');
+
+
+html {
+    width: 100%;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+body {
+    font-family: 'Gothic A1', sans-serif;
+    width: 75%;
+    border: hidden;
+    display: contents;
+}
+
+input{
+    border: 1px solid black; 
+    border-radius: 3px; 
+    line-height: 35px;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+p {
+    font-size: 15px;
+    padding-bottom: 3px;
+}
+
+.wrapper {
+    padding: 20%;
+    padding-top: 10px;
+    font-size: 13px;
+}
+
+.wrapper div {
+    padding: 0;
+    height: 60%;
+}
+
+.title {
+    text-align: center;
+    font-weight: 700;
+}
+
+.email input {
+    width: 100%;
+}
+
+.name input {
+    width: 100%;
+}
+
+.password input {
+    width: 100%;
+}
+
+.passwordCheck input {
+    width: 100%;
+}
+
+.area select {
+    width: 100%;
+    height: 40px;
+}
+
+.gender {
+    text-align: center;
+}
+
+.gender li {
+    padding: 3px;
+    padding-right: 15px;
+}
+
+.btn-area button {
+    width: 100%;
+    height: 50px;
+    cursor:pointer;
+    background: #185200;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 20px;
+}
+
+button{
+    cursor: pointer;
+    height: 30px;
+}
+
+.error{
+    font-size: 3px;
+    height: 20px;
+    color:red;
+    font-weight: 700;
+}

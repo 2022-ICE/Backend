@@ -11,4 +11,7 @@ router.get('/', ctrl.output.main);
 router.get('/login', ctrl.output.login);
 router.post('/login', ctrl.process.login);
 
+router.get('/signup', ctrl.output.signup);
+router.post('/signup', ctrl.process.signup);
+
 module.exports = router; //외부에서 사용할 수 있도록 export

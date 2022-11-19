@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>회원가입 페이지</title>
+    <link href="/css/home/signup.css" rel="stylesheet" />
+    <script src="/js/home/signup.js" defer></script>
+    <div data-include1="header" id="header"></div><!--헤더 인클루드-->
+    <!-- <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript">   
+        $(document).ready( function() {
+        $("#header").load("Header.ejs");  
+        });
+    </script> -->
+</head>
+<div id="header"></div> 
+<body>       
+    <div class="wrapper">
+        <div class="title"><h1 style="font-size: 21px;">회원가입</h1></div>
+        <div class="name">
+            <p>이름</p>
+            <input id="name"  type="text" placeholder="이름을 입력해 주세요.">
+            <div id="nameError" class="error"></div>
+        </div>
+        <div class="id">
+            <p>학번</p>
+            <input id="id"  type="text" placeholder="학번을 입력해 주세요.">
+            <div id="idError" class="error"></div>
+        </div>
+        <div class="password">
+            <p>비밀번호</p>
+            <input id="pw" type="password" placeholder="비밀번호를 입력해 주세요.">
+            <div id="passwordError" class="error"></div>
+        </div>
+        <div class="passwordCheck">
+            <p>비밀번호 확인</p>
+            <input id="pwcheck" type="password" placeholder="비밀번호를 다시 입력해 주세요.">
+            <div id="passwordCheckError" class="error"></div>
+        </div>
+        <div class="email">
+            <p>이메일</p>
+            <input id="email" type="text" placeholder="이메일을 입력해 주세요.">
+            <div id="emailError" class="error"></div>
+        </div>
+
+        <div class="area">
+            <p>학년</p>
+            <select id="area">
+                <option selected disabled>학년을 선택하세요.</option>
+                <option>1학년</option>
+                <option>2학년</option>
+                <option>3학년</option>
+                <option>4학년</option>
+                <option>졸업생</option>
+            </select>
+            <div id="areaError" class="error"></div>
+        </div>
+        <!-- <div class="gender">
+            <p>성별</p>
+            <li><input id="gender_man" type="radio" name="gender">남성</li>
+            <li><input id="gender_woman" type="radio" name="gender">여성</li>
+            <div id="genderError" class="error"></div>
+        </div> -->
+        <div class="line">
+            <hr>
+        </div>
+        <div class="btn-area" >
+            <button id="btn" type="submit">SIGN UP</button>
+        </div>
+        <div style="float:middle">
+            <p class="message">Already have an account? <a href="/login">LOGIN</a></p>
+        </div>
+    </div>
+
+</body>
+
+
+</html>
