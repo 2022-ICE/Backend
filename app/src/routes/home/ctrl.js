@@ -19,14 +19,14 @@ const output = {
 
 //user에 로그인할때 넣은 req.body(id, psword)를 넣고 있게 한다.
 const process = {
-    login : (req,res) => {
+    login : async (req,res) => {
         const user = new User(req.body);
-        const response = user.login();
+        const response = await user.login();
         return res.json(response);
     },
-    signup : (req,res) => {
+    signup : async (req,res) => {
         const user = new User(req.body);
-        const response = user.signup();
+        const response = await user.signup();
         return res.json(response);
     }
 };
