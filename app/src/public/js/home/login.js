@@ -4,7 +4,7 @@
 //DOM(Document Object Model) ; js에서 html에 존재하는 데이터를 가져와서 제어
 
 const id = document.querySelector("#id"),
-    psword = document.querySelector("#pw"),
+    psword = document.querySelector("#psword"),
     loginBtn = document.querySelector("#btn");
 
 loginBtn.addEventListener("click", login);
