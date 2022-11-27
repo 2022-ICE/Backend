@@ -4,6 +4,8 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser"); //json body 읽을 수 있도록
+const dotenv = require("dotenv");
+dotenv.config();
 
 // 라우팅
 const home = require("./src/routes/home");
