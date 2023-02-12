@@ -1,4 +1,3 @@
-# BACK_2
-..2번째 시도...
+# Backend 
 
-login, signup
+node.js -> member api
